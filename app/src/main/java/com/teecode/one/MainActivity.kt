@@ -1,6 +1,7 @@
 package com.teecode.one
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -68,11 +69,16 @@ class MainActivity : AppCompatActivity() {
 //        imageView.setImageResource(R.drawable.ic_launcher_foreground)
 
 
+
         button.setOnClickListener {
 
             if (validateData()) {
                 showSnackBar()
             }
+
+            intent = Intent(this,User::class.java)
+            startActivity(intent)
+
         }
     }
 
