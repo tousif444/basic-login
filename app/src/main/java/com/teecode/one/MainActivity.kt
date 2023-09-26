@@ -74,11 +74,9 @@ class MainActivity : AppCompatActivity() {
 
             if (validateData()) {
                 showSnackBar()
+                intent = Intent(this,User::class.java)
+                startActivity(intent)
             }
-
-            intent = Intent(this,User::class.java)
-            startActivity(intent)
-
         }
     }
 
